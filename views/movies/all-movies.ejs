@@ -14,15 +14,15 @@
             <td data-label="Name">
                 <div class="ui checkbox">
                     <% if (!movie.watched) { %>
-                        <input type="checkbox" name="watched" class="controller" id=<%=movie._id%>>
+                        <input type="checkbox" class="controller" id=<%=movie._id%>>
                     <% } else { %>
-                        <input type="checkbox" name="watched" class="controller" id=<%=movie._id%> checked>
+                        <input type="checkbox" class="controller" id=<%=movie._id%> checked>
                     <% }%>
                     <label></label>
                 </div>
             </td>
             <td data-label="Name"><%= movie.name %></td>
-            <td data-label="Created"><%= movie.date.toString() %></td>
+            <td data-label="Created"><%= movie.date.getMonth()+1 %>/<%= movie.date.getDate() %>/<%= movie.date.getFullYear() %></td>
             </tr>
         <% }) %>
             </tbody>

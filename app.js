@@ -3,8 +3,9 @@ const app             = express();
 const path            = require('path');
 const mongoose        = require('mongoose');
 const port            = process.env.PORT || 3000;
+const db              = process.env.MONGODB_URI || 'mongodb://localhost:27017/movies-for-later'
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser : true });
+mongoose.connect(db, { useNewUrlParser : true });
 
 
 var indexRoutes = require("./routes/index"),
@@ -12,7 +13,7 @@ var indexRoutes = require("./routes/index"),
 
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
-// app.use(express.json());
+
 app.use(express.urlencoded({ extended: false }));
 
 
