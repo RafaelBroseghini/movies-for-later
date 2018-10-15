@@ -4,7 +4,7 @@ const path            = require('path');
 const mongoose        = require('mongoose');
 const port            = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://heroku_06wzv33h:clmt3lvsqihdhpoigft3m8t0r@ds133113.mlab.com:33113/heroku_06wzv33h', { useNewUrlParser : true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser : true });
 
 
 var indexRoutes = require("./routes/index"),
