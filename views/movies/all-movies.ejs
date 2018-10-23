@@ -1,33 +1,38 @@
 <% include ../partials/header %>
-
-<div class="ui container">
-    <table class="ui celled table">
-    <thead>
-        <tr><th>Watched</th>
-        <th>Name</th>
-        <th>Created on</th>
-    </tr></thead>
+<div class="ui grid">
+    <div class="sixteen wide column">
+    <div class="ui container">
+        <table class="ui celled table">
+        <thead>
+            <tr><th>Watched</th>
+            <th>Name</th>
+            <th>Created on</th>
+        </tr></thead>
+        
+        <tbody>
+            <% movies.forEach(function(movie){ %>
+                <tr>
+                <td data-label="Name">
+                    <div class="ui checkbox">
+                        <% if (!movie.watched) { %>
+                            <input type="checkbox" class="controller" id=<%=movie._id%>>
+                        <% } else { %>
+                            <input type="checkbox" class="controller" id=<%=movie._id%> checked>
+                        <% }%>
+                        <label></label>
+                    </div>
+                </td>
+                <td data-label="Name"><%= movie.name %></td>
+                <td data-label="Created"><%= movie.date.getMonth()+1 %>/<%= movie.date.getDate() %>/<%= movie.date.getFullYear() %></td>
+                </tr>
+            <% }) %>
+                </tbody>
+            </table>
+        <ul>
+    </div>
     
-    <tbody>
-        <% movies.forEach(function(movie){ %>
-            <tr>
-            <td data-label="Name">
-                <div class="ui checkbox">
-                    <% if (!movie.watched) { %>
-                        <input type="checkbox" class="controller" id=<%=movie._id%>>
-                    <% } else { %>
-                        <input type="checkbox" class="controller" id=<%=movie._id%> checked>
-                    <% }%>
-                    <label></label>
-                </div>
-            </td>
-            <td data-label="Name"><%= movie.name %></td>
-            <td data-label="Created"><%= movie.date.getMonth()+1 %>/<%= movie.date.getDate() %>/<%= movie.date.getFullYear() %></td>
-            </tr>
-        <% }) %>
-            </tbody>
-        </table>
-    <ul>
+    </div>
+
 </div>
 
 
