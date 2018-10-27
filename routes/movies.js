@@ -24,9 +24,7 @@ router.post("/update", (req, res) =>
         if (err) {
             throw err;
         } else {
-            console.log(req.body.watched);
-            
-            // existingMovie.watched = req.body.watched
+            console.log(req.body.watched);          
         }
 
     })
