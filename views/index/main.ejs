@@ -1,21 +1,24 @@
 <% include ../partials/header %>
-
-<div class="ui middle aligned center aligned grid">
-    <div class="column">
-      <h2 class="ui teal image header">
-        <div class="content">
-          New movie?
+<div class="ui grid">
+  <div class="ui container">
+    <div class="ui middle aligned center aligned grid">
+        <div class="column">
+          <h2 class="ui teal image header">
+            <div class="content">
+              New movie?
+            </div>
+          </h2>
+          <form action="/m/new" method="post" class="ui form">
+            <input type="text" name="name" id="">
+            <input type="submit" value="Add movie!" class="ui button">
+        </form>
+          <div class="ui message">
+            Check out all movies!<a href="/m/all">All movies!</a>
+          </div>
         </div>
-      </h2>
-      <form action="/m/new" method="post" class="ui form">
-        <input type="text" name="name" id="">
-        <input type="submit" value="Add movie!" class="ui button">
-    </form>
-      <div class="ui message">
-        Check out all movies!<a href="/m/all">All movies!</a>
       </div>
-    </div>
   </div>
+</div>
   
 
   <% include ../partials/footer %>
