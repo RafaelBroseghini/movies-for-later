@@ -1,18 +1,24 @@
 <% include ../partials/header %>
 <div class="ui grid container">
-    <div class="sixteen wide column">
-
-        <div class="ui segment">
-            <form action="/m/new" method="post" class="ui form">
-                <div class="field">
-                <input type="text" name="name" id="" placeholder='Movie name goes here...'>
-                </div>
-                <div class="field">
-                <input type="submit" value="Add movie!" class="ui button">
-                </div>
-            </form>
+  <div class="sixteen wide column">
+    <div class="ui segment">
+      <h2 class="ui teal image header">
+        <div class="content">
+          New movie?
         </div>
+      </h2>
+      <form action="/m/new" method="post" class="ui form">
+        <div class="field">
+          <input type="text" name="name" id="" placeholder="Finding Nemo...">
+        </div>
+        <div class="field">
+          <input type="submit" value="Add movie!" class="ui button">
+        </div>
+      </form>
+      <div class="ui message">
+        Check out all movies!<a href="/m/all">All movies!</a>
+      </div>
     </div>
+  </div>
 </div>
-
 <% include ../partials/footer %>
