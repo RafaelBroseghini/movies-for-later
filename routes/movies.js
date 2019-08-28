@@ -4,7 +4,13 @@ var express = require("express"),
 var Movie   = require("../models/movie");
 
 router.post("/new", (req, res) =>
-    Movie.create({name: req.body.name}, function(err, newMovie){
+    Movie.create({
+                    name: req.body.name,
+                    genre: req.body.genre,
+                    score: req.body.score,
+                    author: req.body.author
+                }, 
+    function(err, newMovie){
         if (err) {
             throw err;
         }
@@ -12,7 +18,6 @@ router.post("/new", (req, res) =>
             if (err) {
                 throw err;
             }
-        console.log("Created and saved movie!");
 
         res.redirect("/m/all");
         })
