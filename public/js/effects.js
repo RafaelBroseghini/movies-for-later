@@ -2,6 +2,10 @@ $('document').ready(function(){
     $('table').tablesort()
 });
 
+$('document').ready(function(){
+    $('.ui.dropdown').dropdown()
+});
+
 /*
 	A simple, lightweight jQuery plugin for creating sortable tables.
 	https://github.com/kylefox/jquery-tablesort

@@ -8,8 +8,35 @@
         </div>
       </h2>
       <form action="/m/new" method="post" class="ui form">
-        <div class="field">
-          <input type="text" name="name" id="" placeholder="Finding Nemo..." required>
+        <div class="fields">
+          <div class="six wide field">
+            <input type="text" name="name" id="" placeholder="Movie name:" required>
+          </div>
+          <div class="six wide field">
+            <input type="text" name="genre" id="" placeholder="Genre:" required>
+          </div>
+          <div class="four wide field">
+            <input type="number" name="score" id="" placeholder="0-100" required min="0" max="100">
+          </div>
+        </div>
+        <div class="fields">
+          <div class="sixteen wide field">
+              <select class="ui fluid search dropdown" name="author">
+                  <option value="">Team Member:</option>
+                  <option value="Aubray">Aubray</option>
+                  <option value="Dipen">Dipen</option>
+                  <option value="Emily">Emily</option>
+                  <option value="Evan">Evan</option>
+                  <option value="Matt">Matt</option>
+                  <option value="Meredith">Meredith</option>
+                  <option value="Rafa">Rafa</option>
+                  <option value="Shahaed">Shahaed</option>
+                  <option value="Siddartha">Siddartha</option>
+                  <option value="Snehal">Snehal</option>
+                  <option value="Sudheer">Sudheer</option>
+                  <option value="Tawni">Tawni</option>
+                </select>
+          </div>
         </div>
         <div class="field">
           <input type="submit" value="Add movie!" class="ui button">

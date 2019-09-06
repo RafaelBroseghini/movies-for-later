@@ -2,11 +2,16 @@
 <div class="ui grid">
     <div class="sixteen wide column">
     <div class="ui container">
-        <a href="/" target="" rel="noopener noreferrer" class="ui button teal basic">Add movie</a>
+        <a href="/" target="" rel="noopener noreferrer" class="circular ui button basic">
+            <i class="icon arrow left"></i>
+            Back</a>
         <table class="ui sortable celled table">
         <thead>
             <tr><th class="ascending">Watched</th>
             <th class="ascending">Name</th>
+            <th class="ascending">Genre</th>
+            <th class="ascending">Score</th>
+            <th class="ascending">Added by</th>
             <th class="ascending">Added on</th>
         </tr></thead>
         
@@ -24,7 +29,13 @@
                     </div>
                 </td>
                 <td data-label="Name"><%= movie.name %></td>
-                <td data-label="Created"><%= movie.date.getMonth()+1 %>/<%= movie.date.getDate() %>/<%= movie.date.getFullYear() %></td>
+                <td data-label="Genre"><%= movie.genre %></td>
+                <td data-label="Score"><%= movie.score %></td>
+                <td data-label="Author"><%= movie.author %></td>
+                <td data-label="Created"><%= movie.date.getMonth()+1 %>
+                                        /<%= movie.date.getDate() %>
+                                        /<%= movie.date.getFullYear() %>
+                </td>
                 </tr>
             <% }) %>
                 </tbody>
